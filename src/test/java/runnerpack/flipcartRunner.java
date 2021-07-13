@@ -6,8 +6,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="FeatureFiles/datatabledemo.feature", glue="stepdefpack", monochrome=true)
-public class RCDemo {
-
+@CucumberOptions(features="FeatureFiles/flipcartdemo.feature", glue ="stepdefpack")
+public class flipcartRunner {
 
 }

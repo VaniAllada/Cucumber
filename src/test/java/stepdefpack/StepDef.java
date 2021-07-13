@@ -15,22 +15,14 @@ import cucumber.api.java.en.When;
 public class StepDef {
 	
 	WebDriver driver;
-	
-	//Hooks
-	@Before
-	public void Start() {
-		System.out.println("Start");
+
+	@Given("^user is searching the google URL$")
+	public void user_is_searching_the_google_URL() throws Throwable {
+	   
 		System.setProperty("webdriver.chrome.driver", "C:\\ChromeBrowser\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("https://www.google.com/");
 		System.out.println("Started already");
-	}
-	
-	
-	@Given("^user is searching the google URL$")
-	public void user_is_searching_the_google_URL() throws Throwable {
-	   
-	
 		
 	}
 
@@ -54,13 +46,7 @@ public class StepDef {
 	    String str = ele.getText();
 		System.out.println(str);
 		Assert.assertEquals(estimated, actualTitle);
-		
-	   	}
-	
-	@After
-	public void End() {
 		driver.close();
-		System.out.println("Ended");
-	}
+	   	}
 
 }
